@@ -14,12 +14,12 @@ public class ProdutoController {
 
     private final ProdutoRepository repository;
 
-    @PostMapping
+    @PostMapping("/salva")
     public Produto salva(@RequestBody Produto produto) {
         return repository.save(produto);
     }
 
-    @GetMapping
+    @GetMapping("/listar")
     public List<Produto> listar() {
         return repository.findAll();
     }
